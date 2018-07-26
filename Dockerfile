@@ -2,6 +2,8 @@ FROM resin/raspberrypi3-debian:latest
 MAINTAINER Josh Lamb
 
 ENV PROJECT /var/www/html
+# Enable systemd
+ENV INITSYSTEM on
 
 RUN apt-get update && apt-get install -y --no-install-recommends apache2 curl git openjdk-8-jre php7 php-cli php7.0-sqlite3 libapache2-mod-php7.0 sqlite3 
 RUN a2enmod rewrite
