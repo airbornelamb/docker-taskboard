@@ -3,7 +3,7 @@ services:
 
   app:
     build:
-      context: https://github.com/airbornelamb/docker-taskboard
+      context: .
       dockerfile: Dockerfile
     image: docker-taskboard
     ports:
