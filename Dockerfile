@@ -1,5 +1,4 @@
-FROM php:5.5-apache
-
+FROM php:5-apache
 MAINTAINER Josh Lamb
 
 ENV PROJECT /var/www/html
