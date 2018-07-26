@@ -5,11 +5,14 @@ ENV PROJECT /var/www/html
 # Enable systemd
 ENV INITSYSTEM on
 
-RUN apt-get update && apt-get install -y --no-install-recommends apache2 curl git openjdk-7-jre php5 php5-cli php5-sqlite libapache2-mod-php5 sqlite 
-RUN a2enmod rewrite
-RUN a2enmod expires
+RUN apt-get update && apt-get install -y --no-install-recommends git
 
 RUN git clone https://github.com/kiswa/TaskBoard $PROJECT
+
+RUN apt-get update && apt-get install -y --no-install-recommends apache2 curl git openjdk-7-jre php5 php5-cli php5-sqlite libapache2-mod-php5 sqlite 
+
+RUN a2enmod rewrite
+RUN a2enmod expires
 
 WORKDIR $PROJECT
 
