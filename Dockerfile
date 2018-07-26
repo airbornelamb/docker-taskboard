@@ -1,10 +1,9 @@
-FROM php:5-apache
+FROM resin/raspberrypi3-debian:latest
 MAINTAINER Josh Lamb
 
 ENV PROJECT /var/www/html
 
-RUN apt-get update && apt-get install -y sqlite3 php-sqlite3 git openjdk-8-jre
-
+RUN apt-get update && apt-get install -y --no-install-recommends apache2 curl git openjdk-8-jre php7 php-cli php7.0-sqlite3 libapache2-mod-php7.0 sqlite3 
 RUN a2enmod rewrite
 RUN a2enmod expires
 
