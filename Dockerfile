@@ -1,5 +1,6 @@
-FROM php:5.5-apache
-MAINTAINER "VAILLANT Jérémy" <vaillant.jeremy@dev-crea.com>
+FROM php:5.6-apache
+
+MAINTAINER Josh Lamb
 
 ENV PROJECT /var/www/html
 
