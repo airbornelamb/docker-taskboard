@@ -4,6 +4,7 @@ MAINTAINER Josh Lamb
 ENV PROJECT /var/www/html
 # Enable systemd
 ENV INITSYSTEM on
+EXPOSE 80
 
 RUN apt-get update && apt-get install -y --no-install-recommends git
 
