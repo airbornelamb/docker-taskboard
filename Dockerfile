@@ -1,11 +1,11 @@
-FROM resin/raspberrypi3-debian:stretch
+FROM resin/raspberrypi3-debian:jessie
 MAINTAINER Josh Lamb
 
 ENV PROJECT /var/www/html
 # Enable systemd
 ENV INITSYSTEM on
 
-RUN apt-get update && apt-get install -y --no-install-recommends apache2 curl git openjdk-8-jre php7 php-cli php7.0-sqlite3 libapache2-mod-php7.0 sqlite3 
+RUN apt-get update && apt-get install -y --no-install-recommends apache2 curl git openjdk-7-jre php5 php5-cli php5-sqlite libapache2-mod-php5 sqlite 
 RUN a2enmod rewrite
 RUN a2enmod expires
 
