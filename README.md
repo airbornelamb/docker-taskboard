@@ -15,4 +15,6 @@ docker run -p 80:80 -d devcrea/taskboard
 TEst:
 `docker run --name taskboard -p 8080:80 -v ~/taskboard:/var/www/html -d devcrea/taskboard`
 
-Got to page http://localhost and connect with admin/admin
+`git clone https://github.com/airbornelamb/docker-taskboard && cd docker-taskboard/ && docker-compose up`
+
+Got to page http://localhost:8080 and connect with admin/admin
