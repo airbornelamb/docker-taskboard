@@ -18,3 +18,4 @@ RUN ./build/build-all
 
 RUN chmod -R +w $PROJECT/api/
 RUN chown -R www-data:www-data $PROJECT/
+RUN service apache2 restart
